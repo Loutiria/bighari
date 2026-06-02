@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bighari Order Tracking and Stock Management System</title>
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+<link rel="stylesheet" href="styles/charts.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Main navigation">
+      <div class="brand">
+        <div class="brand-mark">B</div>
+        <div>
+          <strong>Bighari</strong>
+          <span>Order Tracking & Stock Management</span>
+        </div>
+      </div>
+
+      <nav class="nav-groups" id="navGroups"></nav>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow" id="sectionLabel">Dashboard</p>
+          <h1 id="pageTitle">Overview</h1>
+        </div>
+        <div class="command-strip" aria-label="Global commands">
+          <button class="btn btn-primary" data-command="new-order">Add Order</button>
+          <button class="btn" data-command="reserve-stock">Check Stock</button>
+          <button class="btn" data-command="add-restock">Update Stock</button>
+          <button class="btn" data-command="summary">Print Report</button>
+        </div>
+      </header>
+
+      <section class="pulse-grid" id="businessPulse" aria-label="Business health pulse"></section>
+
+      <section class="content-grid" id="appContent" aria-live="polite"></section>
+</main>
+  </div>
+
+  <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <div>
+        <p class="eyebrow" id="drawerKicker">Details</p>
+        <h2 id="drawerTitle">Panel</h2>
+      </div>
+      <button class="icon-btn" id="drawerClose" aria-label="Close drawer">×</button>
+    </div>
+    <div class="drawer-body" id="drawerBody"></div>
+  </aside>
+
+  <nav class="bottom-nav" id="bottomNav" aria-label="Mobile navigation"></nav>
+
+  <script src="scripts/data.js"></script>
+  <script src="scripts/state.js"></script>
+  <script src="scripts/render.js"></script>
+  <script src="scripts/actions.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/charts.js"></script>
+</body>
+</html>
